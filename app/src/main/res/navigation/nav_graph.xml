@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!-- MainFragment -->
+    <fragment android:id="@+id/mainFragment"
+        android:name="com.example.crossword_designer.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+
+        <action android:id="@+id/action_mainFragment_to_designFragment"
+            app:destination="@id/chooseDesignFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+
+        <action android:id="@+id/action_mainFragment_to_playFragment"
+            app:destination="@id/choosePlayFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+
+
+    </fragment>
+
+
+    <!-- ViewTransactionFragment -->
+    <fragment android:id="@+id/chooseDesignFragment"
+        android:name="com.example.crossword_designer.design.DesignFragment"
+        android:label="fragment_view_transaction"
+        tools:layout="@layout/fragment_design">
+
+        <action android:id="@+id/action_designFragment_to_ClueDesignFragment"
+            app:destination="@id/chooseClueDesignFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+
+
+
+    </fragment>
+
+
+    <!-- TyperFragment -->
+    <fragment android:id="@+id/choosePlayFragment"
+        android:name="com.example.crossword_designer.solve.PlayFragment"
+        android:label="fragment_choose_recipient"
+        tools:layout="@layout/fragment_play">
+
+    </fragment>
+
+    <fragment android:id="@+id/chooseClueDesignFragment"
+        android:name="com.example.crossword_designer.design.ClueDesignFragment"
+        android:label="fragment_choose_recipient"
+        tools:layout="@layout/fragment_clue_design">
+
+    </fragment>
+
+
+
+</navigation>
